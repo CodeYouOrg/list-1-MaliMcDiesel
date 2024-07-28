@@ -15,7 +15,11 @@
 
 def match_ends(words):
     # +++your code here+++
-    return
+    count = 0
+    for word in words:
+        if len(word) >= 2 and word[0] == word[-1]:
+            count += 1
+    return(count)
 
 
 # B. front_x
@@ -28,7 +32,15 @@ def match_ends(words):
 
 def front_x(words):
     # +++your code here+++
-    return
+    product = []
+    nox_product = []
+    for word in words:
+        if word.startswith('x'):
+            product.append(word)
+        else:
+            nox_product.append(word)
+    return sorted(product) + sorted(nox_product)
+
 
 
 # C. sort_last
